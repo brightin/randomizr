@@ -5,7 +5,7 @@ require "active_record"
 class ActiveRecord::Base
   def self.randomizr
     if (c = count) > 0
-      first(:offset => rand(c)) 
+      offset(rand c).first
     end
   end
 end
